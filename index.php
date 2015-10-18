@@ -1,4 +1,1 @@
-<?php 
-require_once 'quickaccess.html';
-
- ?>
+<?php require_once('quick_acess.html'); ?>
