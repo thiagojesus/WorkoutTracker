@@ -59,6 +59,7 @@ jQuery(document).ready(function($) {
 			};			
 			if(formSubmitted == 'false' && i == $('#' + currentForm + ' .requiredField').length - 1){
 			 	submitData(currentForm, formType);
+			 	return true;
 			};			  
    		});		
 	};
@@ -66,8 +67,8 @@ jQuery(document).ready(function($) {
 	
 	// contact button function starts
 	$('#contactSubmitButton').click(function() {	
-		validateForm($(this).attr('data-formId'));	
-	    return false;		
+		var result = validateForm($(this).attr('data-formId'));	
+	    return result;		
 	});
 	// contact button function ends
 	

@@ -247,30 +247,31 @@
         <div class="signup-page bg2">
             <div class="signup-page-overlay"></div>
             <div class="signup-page-wrapper">
-                <a href="#" class="signup-logo"></a>
+                <a href="#" class="signup-sub">Crie uma conta</a>
                 <p>
-                    Create an account bellow, it's really easy! 
+                    Insira seus dados, é bem simples! 
                 </p>
-                <input type="text" class="signup-email" value="Email">
-                <input type="text" class="signup-password" value="Password">
+                <input type="text" class="signup-name" value="Nome" id="name" onblur="if (this.value == '') {this.value = 'Nome';}"
+                        onfocus="if (this.value == 'Nome') {this.value = '';}">
+                <input type="text" class="signup-email" value="Email" id="email" onblur="if (this.value == '') {this.value = 'Email';}"
+                        onfocus="if (this.value == 'Email') {this.value = '';}">
+                <input type="password" class="signup-password" value="Senha" id="senha" onblur="if (this.value == '') {this.value = 'Senha';}"
+                        onfocus="if (this.value == 'Senha') {this.value = '';}">
+                <input type="text" class="signup-height" value="Altura" id="altura" onblur="if (this.value == '') {this.value = 'Altura';}"
+                        onfocus="if (this.value == 'Altura') {this.value = '';}">
+                <input type="text" class="signup-weight" value="Peso" id="peso" onblur="if (this.value == '') {this.value = 'Peso';}"
+                        onfocus="if (this.value == 'Peso') {this.value = '';}">
                 <div class="one-half">
-                    <a href="#" class="button button-green full-button">Signup</a>
+                    <a class="button button-green full-button" id="signup">Signup</a>
                 </div>                
                 <div class="one-half last-column">
                     <a href="pageapp-login.html" class="button button-blue full-button">Login</a>
                 </div>
                 <div class="clear"></div>
                 <div class="or-button">
-                    <em></em>
-                    <strong>or</strong>
-                    <em></em>
                 </div>
                 
-                <div class="signup-socials">
-                    <a href="#" class="facebook"><i class="fa fa-facebook"></i>Signup with Facebook</a>
-                    <a href="#" class="twitter"><i class="fa fa-twitter"></i>Signup with Twitter</a>
-                    <a href="#" class="google"><i class="fa fa-google-plus"></i>Signup with Google Plus</a>
-                </div>
+
                 
             </div>            
         </div>
@@ -310,6 +311,22 @@
     </div>
     
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("signup").click(function(){
+            $.post("server/addUser.php",{
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                senha: document.getElementById("senha").value,
+                altura: document.getElementById("altura").value,
+                peso: document.getElementById("peso").value
+            }, function(response){
+
+            })
+        })
+    })
+</script>
 
 </body>
 
