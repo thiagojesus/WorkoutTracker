@@ -1,1 +1,0 @@
-<?php require_once('quick_acess.html'); ?>
