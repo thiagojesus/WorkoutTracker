@@ -1829,6 +1829,14 @@ table tr:hover td{
 	width:100%;
 }
 
+.contactSubmitButton2{
+	line-height:19px!important;
+	display:block;
+	height:36px!important;
+	margin-right:4px;
+	width:100%;
+}
+
 .contact-form{
 	margin-bottom:20px;
 }

@@ -75,7 +75,7 @@
                                 <div class="formFieldWrap">
 
                                     <label class="field-title contactNameField" for="contactNameField">Nome do Treino:<span>(required)</span></label>
-                                    <input type="text" name="contactNameField" value="Treino Peito" class="contactField requiredField" id="contactNameField"/>
+                                    <input type="text" name="contactNameField" value="Treino Aeróbico I" class="contactField requiredField" id="contactNameField"/>
 
                                     <label class="field-title contactNameField" for="contactNameField">Tempo de Descanso(segundos):<span>(required)</span></label>
                                     <input type="text" name="contactNameField" value="30" class="contactField requiredField" id="contactNameField"/>
@@ -121,7 +121,7 @@
                                         
                                         <label class="field-title contactNameField" for="contactNameField">Exercicio:<span>(required)</span></label>
                                         <select class="contactCombobox requiredField">
-                                          <option selected="selected" class="contactCombobox requiredField" value="supino_reto">Supino Reto</option>
+                                          <option selected="selected" class="contactCombobox requiredField" value="supino_reto">Corrida</option>
                                           <option class="contactCombobox requiredField" value="supino_inclinado">Supino Inclinado</option>
                                           <option class="contactCombobox requiredField" value="supino_declinado">Supino Declinado</option>
                                         </select>
@@ -131,9 +131,6 @@
 
                                         <label class="field-title contactEmailField" for="contactEmailField">Repetições:<span>(required)</span></label>
                                         <input type="text" name="contactEmailField" value="12" class="contactField requiredField" id="contactEmailField"/>
-
-                                        <label class="field-title contactMessageTextarea" for="contactMessageTextarea">Peso:<span>(required)</span></label>
-                                        <input type="text" name="contactMessageTextarea" value="30" class="contactField requiredField" id="contactMessageTextarea"/>
                                     </div>
                                 </fieldset>
                             </form>  
@@ -173,7 +170,7 @@
                                         <label class="field-title contactNameField" for="contactNameField">Exercicio:<span>(required)</span></label>
                                         <select class="contactCombobox requiredField">
                                           <option class="contactCombobox requiredField" value="supino_reto">Supino Reto</option>
-                                          <option selected="selected" class="contactCombobox requiredField" value="supino_inclinado">Supino Inclinado</option>
+                                          <option selected="selected" class="contactCombobox requiredField" value="supino_inclinado">Agachamento</option>
                                           <option class="contactCombobox requiredField" value="supino_declinado">Supino Declinado</option>
                                         </select>
 
@@ -182,25 +179,13 @@
 
                                         <label class="field-title contactEmailField" for="contactEmailField">Repetições:<span>(required)</span></label>
                                         <input type="text" name="contactEmailField" value="12" class="contactField requiredField" id="contactEmailField"/>
-
-                                        <label class="field-title contactMessageTextarea" for="contactMessageTextarea">Peso:<span>(required)</span></label>
-                                        <input type="text" name="contactMessageTextarea" value="30" class="contactField requiredField" id="contactMessageTextarea"/>
                                     </div>
                                 </fieldset>
                             </form>  
                         </div>
                     </div>
                 </div>
-                <div id="btn-add-exercicio" class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fa fa-newspaper-o"></i>
-                    </div>
-                    <div class="timeline-text">
-                        <h3 class="title">Adicionar Exercício</h3>
-                        <img src="images/+.jpg" name="contactNameField" value="" class="contactField requiredField" id="contactNameField" style="min-width: 50px; display: inline-block; padding: 5px; height: 45px;" onclick="newExercicio()"/>
-                    </div>
-                </div>
-                <input type="button" class="buttonWrap button button-green contactSubmitButton2" id="contactSubmitButton" value="SALVAR ALTERAÇÃO" style="width: 300px; display:inline-block; margin-left:100px; margin-right:10px;" onclick="confirmFunction()"/>
+                <input type="button" class="buttonWrap button button-green contactSubmitButton2" id="contactSubmitButton" value="ADICIONAR AOS MEUS TREINOS" style="width: 300px; display:inline-block; margin-left:100px; margin-right:10px;" onclick="confirmFunction()"/>
                 <input type="button" class="buttonWrap button button-red contactSubmitButton2" id="contactCancelButton" value="CANCELAR" style="width: 300px; display:inline-block;" onclick="cancelFunction()"/>
             <div class="decoration"></div>
         </div>   
@@ -219,7 +204,7 @@
         content += '</div>';
         content += '<div class="timeline-text">';
         content += '<h3 class="title" style="display:inline-block;">Execício '+ i +'</h3>';
-        content += '<img src="images/x.jpg" name="contactNameField" value="" class="contactField requiredField" id="contactNameField" style="min-width: 50px; display: inline-block; padding: 5px; height: 45px; margin-left: 950px;" onclick="deleteExercicio('+i+')"/>';
+        content += '<img src="images/x.jpg" name="contactNameField" value="" class="contactField requiredField" id="contactNameField" style="min-width: 50px; display: inline-block; padding: 5px; height: 45px; margin-left: 500px;" onclick="deleteExercicio('+i+')"/>';
         content += '<form action="php/contact.php" method="post" class="contactForm" id="contactForm">';
         content += '<fieldset>';
         content += '<div class="formFieldWrap">';
@@ -253,7 +238,7 @@
     };
 
     function confirmFunction(){
-        alert("Treino Alterado com Sucesso!!");
+        alert("Treino Adicionado ao Meus Treinos!!");
         window.location = "index.html";
     }
 
@@ -261,7 +246,7 @@
         
         var decisao = confirm("Deseja Cancelar a Operação?");
         if(decisao){
-            window.location = "meus-treinos.html";
+            window.location = "pesquisar-treino.html";
         }
     }
 

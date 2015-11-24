@@ -37,7 +37,7 @@
 </div>
 
 <div class="header" style="background-color: black;">
-    <a href="#" class="main-logo-white"></a>
+    <a href="index.html" class="main-logo-white"></a>
 </div>
 <div class="decoration"></div>
 
@@ -98,7 +98,8 @@
                         <img src="images/+.jpg" name="contactNameField" value="" class="contactField requiredField" id="contactNameField" style="min-width: 50px; display: inline-block; padding: 5px; height: 45px;" onclick="newExercicio()"/>
                     </div>
                 </div>
-                <input type="button" class="buttonWrap button button-green contactSubmitButton" id="contactSubmitButton" value="SALVAR ALTERAÇÃO" style="width: 325px; display:inline-block; margin-left:100px" onclick="confirmFunction()"/>
+                <input type="button" class="buttonWrap button button-green contactSubmitButton2" id="contactSubmitButton" value="CADASTRAR TREINO" style="width: 300px; display:inline-block; margin-left:100px; margin-right:10px;" onclick="confirmFunction()"/>
+                <input type="button" class="buttonWrap button button-red contactSubmitButton2" id="contactCancelButton" value="CANCELAR" style="width: 300px; display:inline-block;" onclick="cancelFunction()"/>
             <div class="decoration"></div>
         </div>   
     </div>
@@ -116,7 +117,7 @@
         content += '</div>';
         content += '<div class="timeline-text">';
         content += '<h3 class="title" style="display:inline-block;">Execício</h3>';
-        content += '<img src="images/x.jpg" name="contactNameField" value="" class="contactField requiredField" id="contactNameField" style="min-width: 50px; display: inline-block; padding: 5px; height: 45px; margin-left: 500px;" onclick="deleteExercicio('+i+')"/>';
+        content += '<img src="images/x.jpg" name="contactNameField" value="" class="contactField requiredField" id="contactNameField" style="min-width: 50px; display: inline-block; padding: 5px; height: 45px; margin-left: 950px;" onclick="deleteExercicio('+i+')"/>';
         content += '<form action="php/contact.php" method="post" class="contactForm" id="contactForm">';
         content += '<fieldset>';
         content += '<div class="formFieldWrap">';
@@ -148,6 +149,19 @@
 
         document.getElementById("ex"+id+"").style.display = "none";
     };
+
+    function confirmFunction(){
+        alert("Treino Cadastrado com Sucesso!!");
+        window.location = "index.html";
+    }
+
+    function cancelFunction(){
+        
+        var decisao = confirm("Deseja Cancelar a Operação?");
+        if(decisao){
+            window.location = "meus-treinos.html";
+        }
+    }
 
 </script>
 
