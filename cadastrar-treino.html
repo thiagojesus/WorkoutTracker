@@ -66,27 +66,12 @@
 
         </div>
         
-        <div class="content">
+<div class="content">
             <div class="container no-bottom">
                 <h3>Novo Treino</h3>
             </div>
-                        <form action="php/contact.php" method="post" class="contactForm" id="contactForm">
+                        <form class="contactForm" id="contactForm">
                             <fieldset>
-                                <div class="formValidationError" id="contactNameFieldError">
-                                    <div class="static-notification-red tap-dismiss-notification">
-                                        <p class="center-text uppercase">Nome do treino precisa ser preenchido!</p>
-                                    </div>
-                                </div>             
-                                <div class="formValidationError" id="contactEmailFieldError">
-                                    <div class="static-notification-red tap-dismiss-notification">
-                                        <p class="center-text uppercase">Tempo de descanso precisa ser preenchido!</p>
-                                    </div>
-                                </div> 
-                                <div class="formValidationError" id="contactEmailFieldError2">
-                                    <div class="static-notification-red tap-dismiss-notification">
-                                        <p class="center-text uppercase">Treino precisa ter pelo menos 1 exercício</p>
-                                    </div>
-                                </div>  
                                 <div class="formFieldWrap">
 
                                     <label class="field-title contactNameField" for="contactNameField">Nome do Treino:<span>(required)</span></label>
@@ -113,7 +98,7 @@
                         <img src="images/+.jpg" name="contactNameField" value="" class="contactField requiredField" id="contactNameField" style="min-width: 50px; display: inline-block; padding: 5px; height: 45px;" onclick="newExercicio()"/>
                     </div>
                 </div>
-
+                <input type="button" class="buttonWrap button button-green contactSubmitButton" id="contactSubmitButton" value="SALVAR ALTERAÇÃO" style="width: 325px; display:inline-block; margin-left:100px" onclick="confirmFunction()"/>
             <div class="decoration"></div>
         </div>   
     </div>
@@ -125,12 +110,13 @@
 
     function newExercicio(){
 
-        var content = '<div class="timeline-item">';
+        var content = '<div id="ex'+i+'" class="timeline-item">';
         content += '<div class="timeline-icon">';
         content += '<i class="fa fa-newspaper-o"></i>';
         content += '</div>';
         content += '<div class="timeline-text">';
-        content += '<h3 class="title">Execício '+ i +'</h3>';
+        content += '<h3 class="title" style="display:inline-block;">Execício</h3>';
+        content += '<img src="images/x.jpg" name="contactNameField" value="" class="contactField requiredField" id="contactNameField" style="min-width: 50px; display: inline-block; padding: 5px; height: 45px; margin-left: 500px;" onclick="deleteExercicio('+i+')"/>';
         content += '<form action="php/contact.php" method="post" class="contactForm" id="contactForm">';
         content += '<fieldset>';
         content += '<div class="formFieldWrap">';
@@ -147,10 +133,6 @@
         content += '<label class="field-title contactMessageTextarea" for="contactMessageTextarea">Peso:<span>(required)</span></label>';
         content += '<input type="text" name="contactMessageTextarea" value="" class="contactField requiredField" id="contactMessageTextarea"/>';
         content += '</div>';
-        content += '<div class="formSubmitButtonErrorsWrap">';
-        content += '<input type="submit" class="buttonWrap button button-red contactSubmitButton" id="contactCancelButton" value="EXCLUIR EXECÍCIO" style="width: 325px; display:inline-block; float:left; margin-left: 0px; margin-right: px;" onclick="breakFunction()"/>';
-        content += '<input type="submit" class="buttonWrap button button-green contactSubmitButton" id="contactSubmitButton" value="SALVAR ALTERAÇÃO" data-formId="contactForm" style="width: 325px; display:inline-block;" onclick="confirmFunction()"/>';
-        content += '</div>';
         content += '</fieldset>';
         content += '</form>';
         content += '</div>';
@@ -162,12 +144,9 @@
         i++;
     };
 
-    function deleteExercicio(){
+    function deleteExercicio(id){
 
-        var divContent = document.createElement('div');
-        document.getElementById("exercicios").appendChild(divContent);
-        divContent.innerHTML = content;
-        i++;
+        document.getElementById("ex"+id+"").style.display = "none";
     };
 
 </script>
