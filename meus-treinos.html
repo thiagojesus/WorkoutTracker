@@ -60,11 +60,12 @@
 
         <div class="content" style="height: 200px;">
             <div class="container no-bottom">
-                <h4>Treino Ativo</h4>
+                <h4 style="display:inline-block; margin-right:590px;">Treino Ativo</h4>
+                <img src="images/+.jpg" name="contactNameField" value="" class="contactField requiredField" id="contactNameField" style="min-width: 50px; display: inline-block; padding: 5px; height: 45px;" onclick="cadastrarTreino()"/>
             </div>
             <ul class="gallery square-thumb">
                 <li>
-                    <a href="visualizar-treino.html" title="An awesome gallery!" style="width:50%; height:50%;">
+                    <a href="visualizar-treino.html" title="Visualizar treino" style="width:50%; height:50%;">
                         <img src="images/pictures/fichas.jpg" alt="img"/>
                         <p>Treino A</p>
                     </a>
@@ -98,8 +99,12 @@
 
 <script type="text/javascript">
 
-    function Redirect(var nomeTreino){
+    function redirect(nomeTreino){
         window.location = "vizualisar-treino.html/nome=treino" + nomeTreino;
+    };
+
+    function cadastrarTreino(){
+        window.location = "cadastrar-treino.html";
     };
 
 </script>

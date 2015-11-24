@@ -80,7 +80,7 @@
                 </div>
                 <div class="decoration"></div>
                 <div class="blog-post">
-                    <a class="blog-post-image" href="pesquisar-treino.html">
+                    <a class="blog-post-image" href="pesquisa.html">
                         <img src="images/pictures/pesquisa.jpg" style="width: width: 555px; height:202px;" alt="img">
                     </a>
                     <h3 class="blog-post-title">Pesquisa de Treinos</h3>
@@ -148,37 +148,6 @@
     </div>
     
 </div>
-
-<script type="text/javascript">
-
-$(document).ready(function(){ 
-        
-    $("#ajax-contact-form").submit(function(){
-        var str = $(this).serialize(); 
-        $.ajax( { type: "POST", url: "consulta1.php", data: str, success: function(msg){ 
-                result = $.parseJSON(msg);
-                                pc = result[1];
-                                tp = result[2];
-                                tr = result[3];
-                $("#conteudo_inicial").hide();
-                $("#conteudo_busca").html(result[0]);
-                                if(pc>1){
-                                    document.getElementById("anterior").style.visibility="visible";
-                                }else{
-                                    document.getElementById("anterior").style.visibility="hidden";
-                                }
-                                if(pc<tp){
-                                    document.getElementById("proximo").style.visibility="visible";
-                                }else{
-                                    document.getElementById("proximo").style.visibility="hidden";
-                                }
-            } 
-        }); 
-        return false;
-    }); 
-}
-
-</script>
 
 </body>
 

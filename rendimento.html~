@@ -1,0 +1,142 @@
+<!DOCTYPE HTML><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/splash/splash-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="images/splash/splash-icon-big.png">
+<link rel="apple-touch-startup-image" href="images/splash/splash-screen.png" 	media="screen and (max-device-width: 320px)" />  
+<link rel="apple-touch-startup-image" href="images/splash/splash-screen@2x.png" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" /> 
+<link rel="apple-touch-startup-image" href="images/splash/splash-screen-six.png" media="(device-width: 375px)">
+<link rel="apple-touch-startup-image" href="images/splash/splash-screen-six-plus.png" media="(device-width: 414px)">
+<link rel="apple-touch-startup-image" sizes="640x1096" href="images/splash/splash-screen@3x.png" />
+<link rel="apple-touch-startup-image" sizes="1024x748" href="images/splash/splash-screen-ipad-landscape" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : landscape)" />
+<link rel="apple-touch-startup-image" sizes="768x1004" href="images/splash/splash-screen-ipad-portrait.png" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : portrait)" />
+<link rel="apple-touch-startup-image" sizes="1536x2008" href="images/splash/splash-screen-ipad-portrait-retina.png"   media="(device-width: 768px)	and (orientation: portrait)	and (-webkit-device-pixel-ratio: 2)"/>
+<link rel="apple-touch-startup-image" sizes="1496x2048" href="images/splash/splash-screen-ipad-landscape-retina.png"   media="(device-width: 768px)	and (orientation: landscape)	and (-webkit-device-pixel-ratio: 2)"/>
+
+<title>Rendimento</title>
+
+<link href="styles/style.css"     		 rel="stylesheet" type="text/css">
+<link href="styles/framework.css" 		 rel="stylesheet" type="text/css">
+<link href="styles/owl.theme.css" 		 rel="stylesheet" type="text/css">
+<link href="styles/swipebox.css"		 rel="stylesheet" type="text/css">
+<link href="styles/font-awesome.css"	 rel="stylesheet" type="text/css">
+<link href="styles/animate.css"			 rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/jqueryui.js"></script>
+<script type="text/javascript" src="scripts/framework.plugins.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+
+</head>
+<body> 
+
+<div id="preloader">
+</div>
+
+<div class="header" style="background-color: black;">
+    <a href="index.html" class="main-logo-white"></a>
+</div>
+<div class="decoration"></div>
+
+<div class="all-elements">
+
+    <!-- Page Content-->
+    <div id="content" class="snap-content" style="padding-top: 40px;">
+    
+        <div class="header-clear" style="margin-bottom: 20px;">
+            
+            <a href="index.html" style="display: inline-block;">
+                <p>Home</p>
+            </a>
+            
+            <p style="display: inline-block;"> > </p>
+            
+            <a href="meus-treinos.html" style="display: inline-block;">
+                <p>Rendimento</p>
+            </a>
+
+        </div>
+        
+        <div class="content">
+            <h2>Rendimento</h2>
+
+                        <div id="rendimento">
+                            <img src="images/pictures/graficos.jpg" style="width: 525px; height:202px;" alt="img">
+                        </div> 
+                        <div class="decoration"></div>
+                        <div id="IMC">
+                            <h3>IMC = 28</h3>
+                            <h4>Categoria: acima do peso</h4>
+                        </div>
+                        <div class="decoration"></div>
+                         <div class="container">  
+                <div class="one-half-responsive">
+                    <h3>Porcentagem de exercícios físicos por grupo muscular:</h3>
+                    <div class="full-bottom" id="pie-chart">
+                        <canvas id="generate-pie-chart"></canvas>
+                    </div>  
+                </div>
+
+                <div class="one-half-responsive last-column">
+                    <h3>Legenda:</h3>
+                    
+                    <div>
+                    <p class="no-bottom" style="display:inline-block; height: 20px;">
+                        <em class="chart-box" style="background-color:#c0392b;"></em>50% Perna
+                    </p>
+                    <div style="width:10px; height:10px; background-color: #DC3131; display:inline-block; position: absolute; margin-top: 10px; margin-left: 10px;"></div>
+                    </div>
+
+                    <div>
+                    <p class="no-bottom" style="display:inline-block; height: 20px;">
+                        <em class="chart-box" style="background-color:#c0392b;"></em>20% Braço
+                    </p>
+                    <div style="width:10px; height:10px; background-color: #EFFF00; display:inline-block; position: absolute; margin-top: 10px; margin-left: 10px;"></div>
+                    </div>
+
+                    <div>
+                    <p class="no-bottom" style="display:inline-block; height: 20px;">
+                        <em class="chart-box" style="background-color:#c0392b;"></em>20% Costa
+                    </p>
+                    <div style="width:10px; height:10px; background-color: #444565; display:inline-block; position: absolute; margin-top: 10px; margin-left: 10px;"></div>
+                    </div>
+
+                    <div>
+                    <p class="no-bottom" style="display:inline-block; height: 20px;">
+                        <em class="chart-box" style="background-color:#c0392b;"></em>10% Peito
+                    </p>
+                    <div style="width:10px; height:10px; background-color: #8DE290; display:inline-block; position: absolute; margin-top: 10px; margin-left: 15px;"></div>
+                    </div>
+
+			<div id="IMC2"></div>
+
+                </div>
+            </div>
+            
+            
+            
+           
+            
+        </div>   
+    </div>
+</div>
+
+<script type="text/javascript">
+
+   function verRendimento(){
+      var content = '<div id="IMC">';
+      content += '<h3>IMC = 28</h3>;
+      content += '<h4>Categoria: acima do peso</h4>'
+      content += '</div>';
+      content = '';
+ 
+      document.getElementById('IMC2')
+   }
+
+</script>
+
+</body>
+
